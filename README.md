@@ -124,8 +124,7 @@ def train_model(model,train_loader,test_loader,num_epochs=100):
   plt.title("Training and validation Loss")
   plt.legend()
   plt.show()
-  print("Name: HAREVASU S")
-  print("Reg.no: 212223230069")
+  
 device=t.device("cuda" if t.cuda.is_available() else "cpu")
 model=model.to(device)
 train_model(model,train_loader,test_loader)
@@ -162,8 +161,7 @@ def test_model(model,test_loader):
   plt.title("Confusion Matrix")
   plt.show()
 
-  print("Name: HAREVASU S")
-  print("Reg.no: 212223230069")
+  
   print("Classification Report :")
   print(classification_report(all_labels,all_preds,target_names=class_names))
 test_model(model,test_loader)
@@ -178,8 +176,7 @@ def predict_image(model,image_index,dataset):
   class_names=dataset.classes
 
   image_to_display=transforms.ToPILImage()(image)
-  print("Name: HAREVASU S")
-  print("Reg.no: 212223230069")
+
   plt.figure(figsize=(4,4))
   plt.imshow(image_to_display)
   plt.title(f'Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}')
@@ -200,14 +197,14 @@ predict_image(model,image_index=25,dataset=test_dataset)
 
 
 ## Classification Report
-![image](https://github.com/user-attachments/assets/ffd915eb-06d6-4d87-a901-af5f6a1b0f75)
+![Screenshot 2025-05-15 144201](https://github.com/user-attachments/assets/c928c653-9f1e-4834-85e7-ec5bd823ff06)
 
 
 
 ### New Sample Data Prediction
-![image](https://github.com/user-attachments/assets/38ff9ffd-9dba-49e2-a569-320a36eca8be)
+![Screenshot 2025-05-15 144227](https://github.com/user-attachments/assets/cb02ea61-8425-434b-b584-5fa354e01bef)
 
-![image](https://github.com/user-attachments/assets/5ff5cf6b-255e-4ab4-bf4e-d526bafeb919)
+![Screenshot 2025-05-15 144232](https://github.com/user-attachments/assets/1164f9df-21b1-4758-9c68-6b008a987fe2)
 
 
 ## RESULT
